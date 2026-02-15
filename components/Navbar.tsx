@@ -4,17 +4,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useCart } from '@/context/CartContext';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { cartCount, toggleCart } = useCart();
 
   return (
-    <nav className="fixed w-full z-50 backdrop-blur-md shadow-sm">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Hamburger Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="p-2 text-gray-700 hover:text-green-600 transition-colors"
+          className="p-2 text-[#1B4332] hover:text-green-600 transition-colors"
         >
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isMenuOpen ? (
@@ -26,15 +28,23 @@ export default function Navbar() {
         </button>
 
         {/* Logo */}
-        <Link href="#home" className="flex-shrink-0">
+        <Link href="#home" className="shrink-0">
           <Image src="/images/logo.svg" alt="Light Food Logo" width={150} height={50} className="w-auto scale-220 h-12" />
         </Link>
 
         {/* Cart Icon */}
-        <button className="p-2 text-gray-700 hover:text-green-600 transition-colors">
+        <button
+          onClick={toggleCart}
+          className="p-2 text-[#1B4332] hover:text-green-600 transition-colors relative"
+        >
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
+          {cartCount > 0 && (
+            <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+              {cartCount}
+            </span>
+          )}
         </button>
       </div>
 

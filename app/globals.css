@@ -17,4 +17,6 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: transparent;
+  overflow-x: hidden;
+  position: relative;
 }
