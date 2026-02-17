@@ -13,7 +13,7 @@ export default function Hero() {
                 <div className="relative w-full max-w-4xl px-4">
                     <div className="relative w-full mx-auto bg-amber-50/60 backdrop-blur-md  rounded-3xl overflow-hidden shadow-2xl  ">
                         <Image
-                            src="/images/presentacion1.png"
+                            src="/images/galeriFirst.png"
                             alt="Presentación Light Food"
                             width={500}
                             height={500}
