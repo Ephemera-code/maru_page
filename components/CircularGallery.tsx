@@ -20,8 +20,8 @@ function lerp(p1: number, p2: number, t: number): number {
 function autoBind(instance: any): void { // eslint-disable-line @typescript-eslint/no-explicit-any
   const proto = Object.getPrototypeOf(instance);
   Object.getOwnPropertyNames(proto).forEach(key => {
-    if (key !== 'constructor' && typeof (instance as any)[key] === 'function') {
-      (instance as any)[key] = (instance as any)[key].bind(instance);
+    if (key !== 'constructor' && typeof (instance as any)[key] === 'function') { // eslint-disable-line @typescript-eslint/no-explicit-any
+      (instance as any)[key] = (instance as any)[key].bind(instance); // eslint-disable-line @typescript-eslint/no-explicit-any
     }
   });
 }
