@@ -45,18 +45,18 @@ export default function Products() {
     };
 
     return (
-        <section id="products" className=" ">
-            <div className=" w-screen flex items-center backdrop-blur-xs justify-center  bg-white h-20">
-                <p className="text-center  text-sm text-[#4A5D23] font-semibold">
+        <section id="products" className="pb-2.5 overflow-hidden backdrop-blur-md bg-white/40">
+            <div className="w-full flex items-center justify-center h-20 border-b border-black/5">
+                <p className="text-center text-sm text-[#4A5D23] font-semibold">
                     🍰️ Todos los combos van con postre diet <br />
                     ⭐️ Sandwich con crostones símil papas-fritas
                 </p>
             </div>
-            <div className="container mx-auto ">
-                <h2 className="text-4xl w-screen backdrop-blur-xs bg-white h-20 pt-5 pb-5  font-bold text-center   text-[#1B4332]">Menu</h2>
+            <div className="container mx-auto">
+                <h2 className="text-4xl w-full h-20 flex items-center justify-center font-bold text-[#1B4332]">Menu</h2>
 
                 {/* Category Buttons */}
-                <div className="flex flex-wrap backdrop-blur-xs bg-white justify-center pb-5 gap-2 mb-8 max-w-5xl mx-auto">
+                <div className="flex flex-wrap justify-center pb-5 gap-2 mb-8 max-w-5xl mx-auto">
                     {categories.map((category) => (
                         <button
                             key={category}
@@ -73,7 +73,7 @@ export default function Products() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
                     {filteredProducts.map((product, index) => (
-                        <div key={index} className="bg-[#FFFFFF] rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center relative h-full">
+                        <div key={index} className="bg-white/60 backdrop-blur-xs rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center relative h-full">
                             <h3 className="text-xl font-bold text-[#1B4332] mb-2">{product.name}</h3>
 
                             <p className="text-[#4A5D23] font-semibold text-sm mb-12 grow">{product.description}</p>

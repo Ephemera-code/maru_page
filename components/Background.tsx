@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 export default function Background() {
     return (
-        <div className="fixed top-0 left-0 w-full h-[120vh] -z-50">
+        <div className="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
             <Image
                 alt="Background"
-                src="/images/fondo_page.svg"
+                src="/images/fondo_page3.svg"
                 fill
-                className="object-cover object-center opacity-100"
+                className="object-cover object-center opacity-100 w-full h-full"
                 priority
                 sizes="100vw"
             />
