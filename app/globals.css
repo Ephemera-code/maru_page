@@ -50,15 +50,29 @@
   }
 }
 
+html,
 body {
-  background: transparent;
+  min-height: 100lvh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1B4332;
+  /* Sabor Saludable Green fallback */
+  color: var(--foreground);
   overflow-x: hidden;
   position: relative;
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
@@ -150,6 +164,7 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
