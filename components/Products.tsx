@@ -73,7 +73,7 @@ export default function Products() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
                     {filteredProducts.map((product, index) => (
-                        <div key={index} className="bg-white/60 backdrop-blur-xs rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center relative h-full">
+                        <div key={index} className="bg-white/60 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center relative h-full">
                             <h3 className="text-xl font-bold text-[#1B4332] mb-2">{product.name}</h3>
 
                             <p className="text-[#4A5D23] font-semibold text-sm mb-12 grow">{product.description}</p>
