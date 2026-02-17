@@ -4,6 +4,15 @@
 import { useState } from "react";
 import menuData from "@/app/data/menu.json";
 import { useCart } from "@/context/CartContext";
+import { Wheat } from "lucide-react";
+
+interface Product {
+    name: string;
+    price: string;
+    image: string;
+    category: string;
+    description: string;
+}
 
 export default function Products() {
     const { addToCart } = useCart();
@@ -21,7 +30,7 @@ export default function Products() {
 
     const [selectedCategory, setSelectedCategory] = useState("Todos");
 
-    const products = menuData.menu.flatMap(category =>
+    const products: Product[] = menuData.menu.flatMap(category =>
         category.productos.map(product => ({
             name: product.nombre,
             price: `$${product.precio}`,
@@ -35,7 +44,7 @@ export default function Products() {
         ? products
         : products.filter(product => product.category === selectedCategory);
 
-    const handleAddToCart = (product: any) => {
+    const handleAddToCart = (product: Product) => {
         const priceNumber = parseInt(product.price.replace(/[$.]/g, ""));
         addToCart({
             name: product.name,
@@ -45,7 +54,7 @@ export default function Products() {
     };
 
     return (
-        <section id="products" className="pb-2.5 overflow-hidden bg-white/80">
+        <section id="products" className="pb-2.5 overflow-hidden bg-amber-50/60">
             <div className="w-full flex items-center justify-center h-20 border-b border-black/5">
                 <p className="text-center text-sm text-[#4A5D23] font-semibold">
                     🍰️ Todos los combos van con postre diet <br />
@@ -53,6 +62,14 @@ export default function Products() {
                 </p>
             </div>
             <div className="container mx-auto">
+                <div className="flex flex-col items-center justify-center pt-8 gap-2">
+                    <div className="bg-[#1B4332]/10 p-3 rounded-full">
+                        <Wheat size={32} className="text-[#1B4332]" />
+                    </div>
+                    <p className="text-[#1B4332] font-bold text-lg text-center px-4 max-w-md uppercase tracking-tight">
+                        todos nuestros panes son exclusivos de olivia ligth
+                    </p>
+                </div>
                 <h2 className="text-4xl w-full h-20 flex items-center justify-center font-bold text-[#1B4332]">Menu</h2>
 
                 {/* Category Buttons */}
@@ -73,13 +90,13 @@ export default function Products() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
                     {filteredProducts.map((product, index) => (
-                        <div key={index} className="bg-white/60 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center relative h-full">
+                        <div key={index} className="bg-red-500/20 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center relative h-full">
                             <h3 className="text-xl font-bold text-[#1B4332] mb-2">{product.name}</h3>
 
                             <p className="text-[#4A5D23] font-semibold text-sm mb-12 grow">{product.description}</p>
 
                             <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center">
-                                <p className="text-[#E67E22] font-bold text-xl">{product.price}</p>
+                                <p className="text-[#1B4332] font-bold text-xl">{product.price}</p>
                                 <button
                                     onClick={() => handleAddToCart(product)}
                                     className="bg-[#1B4332] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#E67E22] transition-colors text-sm shadow-md active:scale-95"

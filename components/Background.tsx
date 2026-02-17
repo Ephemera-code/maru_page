@@ -9,7 +9,7 @@ export default function Background() {
         >
             <Image
                 alt="Background"
-                src="/images/fondo_page3.svg"
+                src="/images/fondo_page.png"
                 fill
                 className="object-cover object-center opacity-100 w-full h-full"
                 priority

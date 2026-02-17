@@ -11,7 +11,7 @@ export default function Navbar() {
   const { cartCount, toggleCart } = useCart();
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-amber-50/60 backdrop-blur-md shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Hamburger Menu Button */}
         <button
