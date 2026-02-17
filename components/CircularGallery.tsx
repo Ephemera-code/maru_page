@@ -405,6 +405,7 @@ class App {
   screen!: { width: number; height: number };
   viewport!: { width: number; height: number };
   onSelect?: (index: number) => void;
+  lastSelectTime: number = 0;
   raf: number = 0;
 
   boundOnResize!: () => void;
@@ -555,6 +556,7 @@ class App {
   }
 
   onTouchDown(e: MouseEvent | TouchEvent) {
+    if ('touches' in e && e.cancelable) e.preventDefault();
     this.isDown = true;
     this.scroll.position = this.scroll.current;
 
@@ -574,6 +576,7 @@ class App {
   }
 
   onTouchUp(e: MouseEvent | TouchEvent) {
+    if ('touches' in e && e.cancelable) e.preventDefault();
     if (!this.isDown) return;
 
     const x = 'changedTouches' in (e as any) ? (e as any).changedTouches[0].clientX : (e as MouseEvent).clientX; // eslint-disable-line @typescript-eslint/no-explicit-any
@@ -585,10 +588,13 @@ class App {
     );
 
     const time = Date.now() - this.startTime;
+    const now = Date.now();
 
     // If it's a short, stationary-ish touch/click, consider it a selection
-    if (distance < 10 && time < 300) {
+    // Also add a 500ms cooldown to prevent double triggers
+    if (distance < 10 && time < 300 && (now - this.lastSelectTime > 500)) {
       if (this.onSelect && this.medias && this.medias.length > 0) {
+        this.lastSelectTime = now;
         const width = this.medias[0].width;
         // Logic to find which item was actually clicked
         const index = Math.round(Math.abs(this.scroll.target) / width) % (this.medias.length / 2);
@@ -657,9 +663,9 @@ class App {
     window.addEventListener('mousedown', this.boundOnTouchDown);
     window.addEventListener('mousemove', this.boundOnTouchMove);
     window.addEventListener('mouseup', this.boundOnTouchUp);
-    window.addEventListener('touchstart', this.boundOnTouchDown);
-    window.addEventListener('touchmove', this.boundOnTouchMove);
-    window.addEventListener('touchend', this.boundOnTouchUp);
+    window.addEventListener('touchstart', this.boundOnTouchDown, { passive: false });
+    window.addEventListener('touchmove', this.boundOnTouchMove, { passive: false });
+    window.addEventListener('touchend', this.boundOnTouchUp, { passive: false });
   }
 
   destroy() {

@@ -1,9 +1,14 @@
 "use client";
 
+import { useCallback } from 'react';
 import CircularGallery from './CircularGallery';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function About() {
+    const handleSelect = useCallback(() => {
+        window.open('https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDMxNTA2NTU0NTcxNzI1?story_media_id=3804965363130334082_58331106388&igsh=a2RmNzY5ajFuZHFm', '_blank');
+    }, []);
+
     const galleryItems = [
         { image: '/images/foto_galeria_1.jpeg', text: '' },
         { image: '/images/foto_galeria_2.jpeg', text: '' },
@@ -22,7 +27,7 @@ export default function About() {
                     font="bold 50px Figtree"
                     borderRadius={0.05}
                     scrollSpeed={2}
-                    onSelect={() => window.open('https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDMxNTA2NTU0NTcxNzI1?story_media_id=3804965363130334082_58331106388&igsh=a2RmNzY5ajFuZHFm', '_blank')}
+                    onSelect={handleSelect}
                 />
             </div>
 
