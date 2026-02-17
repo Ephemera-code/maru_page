@@ -393,7 +393,7 @@ class App {
     last: number;
     position?: number;
   };
-  onCheckDebounce: (...args: any[]) => void;
+  onCheckDebounce: (...args: any[]) => void; // eslint-disable-line @typescript-eslint/no-explicit-any
   renderer!: Renderer;
   gl!: GL;
   camera!: Camera;
