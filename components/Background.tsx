@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Background() {
     return (
-        <div className="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
+        <div className="fixed top-0 left-0 w-full h-lvh -z-50 overflow-hidden pointer-events-none">
             <Image
                 alt="Background"
                 src="/images/fondo_page3.svg"
