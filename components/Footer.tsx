@@ -9,9 +9,7 @@ export default function Footer() {
                     <div className="mb-6">
                         <Image src="/images/logo.svg" alt="Light Food Logo" width={150} height={50} className="w-auto scale-250 h-12" />
                     </div>
-                    <p className="text-[#1B4332] font-semibold">
-                        Comida saludable para una vida mejor. Nutriendo tu cuerpo y alma con cada bocado.
-                    </p>
+                    
                 </div>
 
                 <div className="text-center md:text-left">

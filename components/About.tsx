@@ -5,11 +5,10 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function About() {
     const galleryItems = [
-        { image: '/images/galeriFirst.png', text: '' },
-        { image: '/images/galeri1.png', text: '' },
-        { image: '/images/galeri2.jpeg', text: '' },
-        { image: '/images/galeri3.jpeg', text: '' },
-        { image: '/images/galeri4.jpeg', text: '' },
+        { image: '/images/foto_galeria_1.jpeg', text: '' },
+        { image: '/images/foto_galeria_2.jpeg', text: '' },
+        { image: '/images/foto_galeria_3.jpeg', text: '' },
+        { image: '/images/foto_galeria_4.jpeg', text: '' },
     ];
 
     return (

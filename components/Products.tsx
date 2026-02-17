@@ -54,11 +54,11 @@ export default function Products() {
     };
 
     return (
-        <section id="products" className="pb-2.5 overflow-hidden bg-amber-50/60">
-            <div className="w-full flex items-center justify-center h-20 border-b border-black/5">
+        <section id="products" className="pb-2.5 pt-2.5 overflow-hidden bg-amber-50/60">
+            <div className="w-full px-3 flex items-center justify-center h-20 border-b border-black/5">
                 <p className="text-center text-sm text-[#4A5D23] font-semibold">
-                    🍰️ Todos los combos van con postre diet <br />
-                    ⭐️ Sandwich con crostones símil papas-fritas
+                    ⭐️ Todos los Sandwich van con crostones símil papas-fritas y 
+                    postre diet 🍰️ 
                 </p>
             </div>
             <div className="container mx-auto">
