@@ -22,6 +22,7 @@ export default function About() {
                     font="bold 50px Figtree"
                     borderRadius={0.05}
                     scrollSpeed={2}
+                    onSelect={() => window.open('https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDMxNTA2NTU0NTcxNzI1?story_media_id=3804965363130334082_58331106388&igsh=a2RmNzY5ajFuZHFm', '_blank')}
                 />
             </div>
 

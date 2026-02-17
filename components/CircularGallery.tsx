@@ -381,6 +381,7 @@ interface AppConfig {
   font?: string;
   scrollSpeed?: number;
   scrollEase?: number;
+  onSelect?: (index: number) => void;
 }
 
 class App {
@@ -403,16 +404,19 @@ class App {
   mediasImages: { image: string; text: string }[] = [];
   screen!: { width: number; height: number };
   viewport!: { width: number; height: number };
+  onSelect?: (index: number) => void;
   raf: number = 0;
 
   boundOnResize!: () => void;
   boundOnWheel!: (e: Event) => void;
   boundOnTouchDown!: (e: MouseEvent | TouchEvent) => void;
   boundOnTouchMove!: (e: MouseEvent | TouchEvent) => void;
-  boundOnTouchUp!: () => void;
+  boundOnTouchUp!: (e: MouseEvent | TouchEvent) => void;
 
   isDown: boolean = false;
   start: number = 0;
+  startTime: number = 0;
+  startPos: { x: number; y: number } = { x: 0, y: 0 };
 
   constructor(
     container: HTMLElement,
@@ -423,13 +427,15 @@ class App {
       borderRadius = 0,
       font = 'bold 30px Figtree',
       scrollSpeed = 2,
-      scrollEase = 0.05
+      scrollEase = 0.05,
+      onSelect
     }: AppConfig
   ) {
     document.documentElement.classList.remove('no-js');
     this.container = container;
     this.scrollSpeed = scrollSpeed;
     this.scroll = { ease: scrollEase, current: 0, target: 0, last: 0 };
+    this.onSelect = onSelect;
     this.onCheckDebounce = debounce(this.onCheck.bind(this), 200);
     this.createRenderer();
     this.createCamera();
@@ -551,7 +557,13 @@ class App {
   onTouchDown(e: MouseEvent | TouchEvent) {
     this.isDown = true;
     this.scroll.position = this.scroll.current;
-    this.start = 'touches' in e ? e.touches[0].clientX : e.clientX;
+
+    const x = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const y = 'touches' in e ? e.touches[0].clientY : e.clientY;
+
+    this.start = x;
+    this.startPos = { x, y };
+    this.startTime = Date.now();
   }
 
   onTouchMove(e: MouseEvent | TouchEvent) {
@@ -561,7 +573,29 @@ class App {
     this.scroll.target = (this.scroll.position ?? 0) + distance;
   }
 
-  onTouchUp() {
+  onTouchUp(e: MouseEvent | TouchEvent) {
+    if (!this.isDown) return;
+
+    const x = 'changedTouches' in (e as any) ? (e as any).changedTouches[0].clientX : (e as MouseEvent).clientX; // eslint-disable-line @typescript-eslint/no-explicit-any
+    const y = 'changedTouches' in (e as any) ? (e as any).changedTouches[0].clientY : (e as MouseEvent).clientY; // eslint-disable-line @typescript-eslint/no-explicit-any
+
+    const distance = Math.sqrt(
+      Math.pow(x - this.startPos.x, 2) +
+      Math.pow(y - this.startPos.y, 2)
+    );
+
+    const time = Date.now() - this.startTime;
+
+    // If it's a short, stationary-ish touch/click, consider it a selection
+    if (distance < 10 && time < 300) {
+      if (this.onSelect && this.medias && this.medias.length > 0) {
+        const width = this.medias[0].width;
+        // Logic to find which item was actually clicked
+        const index = Math.round(Math.abs(this.scroll.target) / width) % (this.medias.length / 2);
+        this.onSelect(index);
+      }
+    }
+
     this.isDown = false;
     this.onCheck();
   }
@@ -653,6 +687,7 @@ interface CircularGalleryProps {
   font?: string;
   scrollSpeed?: number;
   scrollEase?: number;
+  onSelect?: (index: number) => void;
 }
 
 export default function CircularGallery({
@@ -662,7 +697,8 @@ export default function CircularGallery({
   borderRadius = 0.05,
   font = 'bold 30px Figtree',
   scrollSpeed = 2,
-  scrollEase = 0.05
+  scrollEase = 0.05,
+  onSelect
 }: CircularGalleryProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -674,11 +710,12 @@ export default function CircularGallery({
       borderRadius,
       font,
       scrollSpeed,
-      scrollEase
+      scrollEase,
+      onSelect
     });
     return () => {
       app.destroy();
     };
-  }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
+  }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase, onSelect]);
   return <div className="w-full h-full overflow-hidden cursor-grab active:cursor-grabbing" ref={containerRef} />;
 }
