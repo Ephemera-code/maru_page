@@ -54,17 +54,17 @@ export default function Products() {
     };
 
     return (
-        <section id="products" className="pb-2.5 pt-2.5 overflow-hidden bg-amber-50/60">
-            <div className="w-full px-3 flex items-center justify-center h-20 border-b border-black/5">
-                <p className="text-center text-sm text-[#4A5D23] font-semibold">
-                    ⭐️ Todos los Sandwich van con crostones símil papas-fritas y 
-                    postre diet 🍰️ 
+        <section id="products" className="py-12 bg-[#ccdbb0c9] overflow-hidden">
+            <div className="w-full px-3 flex items-center justify-center h-15 ">
+                <p className="text-center text-lg text-[#4A5D23] font-semibold">
+                    ⭐️ Todos los Sandwich van con crostones símil papas-fritas y
+                    postre diet 🍰️
                 </p>
             </div>
             <div className="container mx-auto">
                 <div className="flex flex-col items-center justify-center pt-8 gap-2">
                     <div className="bg-[#1B4332]/10 p-3 rounded-full">
-                        <Wheat size={32} className="text-[#1B4332]" />
+                        <Wheat size={55} className="text-[#1B4332]" />
                     </div>
                     <p className="text-[#1B4332] font-bold text-lg text-center px-4 max-w-md uppercase tracking-tight">
                         todos nuestros panes son exclusivos de olivia ligth
@@ -90,7 +90,7 @@ export default function Products() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
                     {filteredProducts.map((product, index) => (
-                        <div key={index} className="bg-red-500/20 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center relative h-full">
+                        <div key={index} className="bg-[#d85e5e5b] rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center relative h-full border border-white/10">
                             <h3 className="text-xl font-bold text-[#1B4332] mb-2">{product.name}</h3>
 
                             <p className="text-[#4A5D23] font-semibold text-sm mb-12 grow">{product.description}</p>

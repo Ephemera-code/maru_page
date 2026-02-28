@@ -11,8 +11,8 @@ export default function Navbar() {
   const { cartCount, toggleCart } = useCart();
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-amber-50/60 backdrop-blur-md shadow-md">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#ccdbb0ad] backdrop-blur-md shadow-md">
+      <div className="container mx-auto px-5 py-6 flex justify-between items-center">
         {/* Hamburger Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -28,8 +28,8 @@ export default function Navbar() {
         </button>
 
         {/* Logo */}
-        <Link href="#home" className="shrink-0">
-          <Image src="/images/logo.svg" alt="Light Food Logo" width={150} height={50} className="w-auto scale-220 h-12" />
+        <Link href="#home" className="shrink-0 relative flex items-center justify-center  -mt-7">
+          <Image src="/images/logo_final.svg" alt="Light Food Logo" width={150} height={50} className="w-auto scale-280 h-12" />
         </Link>
 
         {/* Cart Icon */}
@@ -50,7 +50,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-lg border-t border-gray-100 py-4 flex flex-col items-center gap-4 text-lg font-semibold text-gray-700">
+        <div className="absolute top-full left-0 w-full bg-[#ccdbb0f8] backdrop-blur-md shadow-lg border-t border-black/5 py-4 flex flex-col items-center gap-4 text-lg font-semibold text-[#1B4332]">
           <Link href="#home" onClick={() => setIsMenuOpen(false)} className="hover:text-green-600 transition-colors">Home</Link>
           <Link href="#products" onClick={() => setIsMenuOpen(false)} className="hover:text-green-600 transition-colors">Menu</Link>
           <Link href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-green-600 transition-colors">Sobre Nosotros</Link>

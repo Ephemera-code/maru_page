@@ -28,14 +28,14 @@ export default function Loader() {
     if (!isLoading) return null;
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-white transition-opacity duration-700 opacity-100">
+        <div className="fixed inset-0 z-100 flex items-center justify-center bg-white/90 backdrop-blur-md shadow-md transition-opacity duration-700 opacity-100">
             <div className="relative flex flex-col items-center animate-pulse">
                 <Image
-                    src="/images/logo.svg"
+                    src="/images/logo_final.svg"
                     alt="Loading..."
-                    width={200}
-                    height={200}
-                    className="w-48 h-auto"
+                    width={500}
+                    height={500}
+                    className="w-80 md:w-[500px] h-auto"
                     priority
                 />
             </div>

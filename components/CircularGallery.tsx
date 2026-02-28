@@ -418,6 +418,8 @@ class App {
   start: number = 0;
   startTime: number = 0;
   startPos: { x: number; y: number } = { x: 0, y: 0 };
+  observer?: IntersectionObserver;
+  isVisible: boolean = false;
 
   constructor(
     container: HTMLElement,
@@ -608,9 +610,9 @@ class App {
 
   onWheel(e: Event) {
     const wheelEvent = e as WheelEvent;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const delta = wheelEvent.deltaY || (wheelEvent as any).wheelDelta || (wheelEvent as any).detail;
-    this.scroll.target += (delta > 0 ? this.scrollSpeed : -this.scrollSpeed) * 0.2;
+    // Normalize delta across different browsers/devices
+    const delta = Math.sign(wheelEvent.deltaY) * 100;
+    this.scroll.target += (delta > 0 ? this.scrollSpeed : -this.scrollSpeed) * 0.5;
     this.onCheckDebounce();
   }
 
@@ -648,7 +650,10 @@ class App {
     }
     this.renderer.render({ scene: this.scene, camera: this.camera });
     this.scroll.last = this.scroll.current;
-    this.raf = window.requestAnimationFrame(this.update.bind(this));
+
+    if (this.isVisible) {
+      this.raf = window.requestAnimationFrame(this.update.bind(this));
+    }
   }
 
   addEventListeners() {
@@ -658,23 +663,41 @@ class App {
     this.boundOnTouchMove = this.onTouchMove.bind(this);
     this.boundOnTouchUp = this.onTouchUp.bind(this);
     window.addEventListener('resize', this.boundOnResize);
-    window.addEventListener('mousewheel', this.boundOnWheel);
-    window.addEventListener('wheel', this.boundOnWheel);
+    this.container.addEventListener('mousewheel', this.boundOnWheel, { passive: true });
+    this.container.addEventListener('wheel', this.boundOnWheel, { passive: true });
 
     this.container.addEventListener('mousedown', this.boundOnTouchDown);
-    window.addEventListener('mousemove', this.boundOnTouchMove);
+    window.addEventListener('mousemove', this.boundOnTouchMove, { passive: true });
     window.addEventListener('mouseup', this.boundOnTouchUp);
 
-    this.container.addEventListener('touchstart', this.boundOnTouchDown, { passive: false });
-    window.addEventListener('touchmove', this.boundOnTouchMove, { passive: false });
-    window.addEventListener('touchend', this.boundOnTouchUp, { passive: false });
+    this.container.addEventListener('touchstart', this.boundOnTouchDown, { passive: true });
+    window.addEventListener('touchmove', this.boundOnTouchMove, { passive: true });
+    window.addEventListener('touchend', this.boundOnTouchUp, { passive: true });
+
+    // Intersection Observer to pause rendering when off-screen
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (!this.isVisible) {
+            this.isVisible = true;
+            this.raf = window.requestAnimationFrame(this.update.bind(this));
+          }
+        } else {
+          this.isVisible = false;
+        }
+      });
+    }, { threshold: 0.0 });
+    this.observer.observe(this.container);
   }
 
   destroy() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
     window.cancelAnimationFrame(this.raf);
     window.removeEventListener('resize', this.boundOnResize);
-    window.removeEventListener('mousewheel', this.boundOnWheel);
-    window.removeEventListener('wheel', this.boundOnWheel);
+    this.container.removeEventListener('mousewheel', this.boundOnWheel);
+    this.container.removeEventListener('wheel', this.boundOnWheel);
 
     this.container.removeEventListener('mousedown', this.boundOnTouchDown);
     window.removeEventListener('mousemove', this.boundOnTouchMove);

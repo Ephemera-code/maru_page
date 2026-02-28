@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="bg-white/60 backdrop-blur-md py-12 border-t border-white/20">
+        <footer className="py-12 bg-[#ccdbb0f8]">
             <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div className="flex flex-col items-center md:items-start text-center md:text-left">
                     <div className="mb-6">
-                        <Image src="/images/logo.svg" alt="Light Food Logo" width={150} height={50} className="w-auto scale-250 h-12" />
+                        <Image src="/images/logo_final.svg" alt="Light Food Logo" width={150} height={50} className="w-auto scale-250 h-12" />
                     </div>
-                    
+
                 </div>
 
                 <div className="text-center md:text-left">
@@ -28,10 +28,7 @@ export default function Footer() {
                             <span>Email: hola@lightfood.com</span>
                         </li>
                         <li className="flex items-center justify-center md:justify-start gap-2 hover:text-[#C72425] transition-colors cursor-default">
-                            <span>Tel: +123 456 7890</span>
-                        </li>
-                        <li className="flex items-center justify-center md:justify-start gap-2 hover:text-[#C72425] transition-colors cursor-default">
-                            <span>Dirección: Calle Falsa 123</span>
+                            <span>Tel: +54 9 11 5342-2935</span>
                         </li>
                     </ul>
                 </div>

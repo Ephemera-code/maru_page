@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
     return (
-        <section id="home" className="min-h-[90svh] flex items-center justify-center bg-transparent pt-24 pb-12 overflow-hidden">
+        <section id="home" className="min-h-[90svh] flex items-center justify-center bg-[#ccdbb0ad] pt-24 pb-12 overflow-hidden">
             <div className="text-center px-4 max-w-6xl mx-auto flex flex-col items-center">
                 {/* Title */}
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-[#1B4332] mb-8 leading-none">
@@ -48,7 +48,7 @@ export default function Hero() {
                             Explorar Menu
                         </a>
                         <a
-                            href="https://wa.me/"
+                            href="https://wa.me/5491153422935"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-white text-green-600 border-2 border-green-600 px-10 py-3 rounded-full text-sm font-bold hover:bg-green-50 transition-all hover:scale-105 flex items-center justify-center gap-3 shadow-lg"
