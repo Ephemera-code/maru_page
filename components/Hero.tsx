@@ -5,7 +5,7 @@ export default function Hero() {
         <section id="home" className="min-h-[90svh] flex items-center justify-center bg-[#ccdbb0ad] pt-24 pb-12 overflow-hidden">
             <div className="text-center px-4 max-w-6xl mx-auto flex flex-col items-center">
                 {/* Title */}
-                <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-[#1B4332] mb-8 leading-none">
+                <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-[#1B4332] mb-3 leading-none">
                     <span className="">Sin Sal.</span> <br /> Sin Azucar. <br /> <span className="text-[#C72425]">Sin Grasas.</span>
                 </h1>
                 <p className="text-sm md:text-2xl mb-4 text-[#1B4332] font-medium tracking-wide bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 uppercase italic shadow-sm">
