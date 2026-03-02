@@ -67,8 +67,9 @@ export default function Products() {
                     <div className="bg-[#1B4332]/10 p-3 rounded-full">
                         <Wheat size={55} className="text-[#1B4332]" />
                     </div>
-                    <p className="text-[#1B4332] font-bold text-lg text-center px-4 max-w-md uppercase tracking-tight">
-                        todos nuestros panes son exclusivos de olivia ligth
+                    <p className="text-[#1B4332] font-bold text-lg text-center px-4 max-w-md uppercase tracking-tight leading-tight">
+                        todos nuestros panes son exclusivos de olivia ligth <br />
+                        <span className="text-sm normal-case font-semibold">(Usamos 50% de fibra y 50% de harina)</span>
                     </p>
                 </div>
                 <h2 className="text-4xl w-full h-20 flex items-center justify-center font-bold text-[#1B4332]">Menú</h2>

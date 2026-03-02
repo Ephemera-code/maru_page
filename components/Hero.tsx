@@ -8,6 +8,9 @@ export default function Hero() {
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-[#1B4332] mb-8 leading-none">
                     <span className="">Sin Sal.</span> <br /> Sin Azucar. <br /> <span className="text-[#C72425]">Sin Grasas.</span>
                 </h1>
+                <p className="text-sm md:text-2xl mb-4 text-[#1B4332] font-medium tracking-wide bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 uppercase italic shadow-sm">
+                    fibras , calcio y minerales.
+                </p>
 
                 {/* Central Image with Red Frame */}
                 <div className="relative w-full max-w-4xl px-4">
@@ -23,18 +26,13 @@ export default function Hero() {
                     </div>
 
                     {/* Promotional Text */}
-                    <div className="flex w-full pb-2 pt-4 bg-amber-50/60 backdrop-blur-sm rounded-3xl flex-col items-center gap-6 mt-8 mb-4 max-w-4xl mx-auto shadow-sm">
+                    <div className="flex w-full pb-2 pt-4 bg-amber-50/60 backdrop-blur-sm rounded-3xl flex-col items-center gap-6 mt-5 mb-4 max-w-4xl mx-auto shadow-sm">
                         <h2 className="text-3xl md:text-7xl font-extrabold text-[#1B4332] tracking-tighter drop-shadow-sm">
                             Comida sana, rica y natural
                         </h2>
                         <p className="sr-only">Especialistas en comida sin grasa, sin azúcar y sin sal.</p>
                         <p className="text-sm md:text-2xl text-[#1B4332] font-medium tracking-wide bg-amber-50/20 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 uppercase italic shadow-sm">
                             Carnes magras • <br /> Menú vegetariano • <br /> Estudiantil • Ejecutivo
-                        </p>
-                        <p className="text-sm md:text-2xl text-[#1B4332] font-medium tracking-wide bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 uppercase italic shadow-sm">
-                            fibras , calcio y minerales. <br />
-                            Delivery.
-                            Catering para eventos
                         </p>
                     </div>
 

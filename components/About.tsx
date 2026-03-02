@@ -24,7 +24,7 @@ export default function About() {
                     Islas Gastronómicas Saludables para tu Evento
                 </h2>
                 <p className="text-lg md:text-xl text-[#344b25] font-medium leading-relaxed mb-10">
-                    Preparamos y servimos en el momento. Menú 100% libre de sal, azúcar y grasas.
+                    Preparamos y servimos en el momento.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">

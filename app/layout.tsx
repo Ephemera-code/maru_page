@@ -84,6 +84,7 @@ export default function RootLayout({
               "@id": "https://lightfood.com",
               "url": "https://lightfood.com",
               "telephone": "+5491165878387",
+              "email": "Olivialightfastfoodllc@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Tu Dirección Aquí",
