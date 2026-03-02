@@ -6,10 +6,10 @@ export default function Hero() {
             <div className="text-center px-4 max-w-6xl mx-auto flex flex-col items-center">
                 {/* Title */}
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-[#1B4332] mb-3 leading-none">
-                    <span className="">Sin Sal.</span> <br /> Sin Azucar. <br /> <span className="text-[#C72425]">Sin Grasas.</span>
+                    <span className="">Sin Sal.</span> <br /> Sin Azúcar. <br /> <span className="text-[#C72425]">Sin Grasas.</span>
                 </h1>
                 <p className="text-sm md:text-2xl mb-4 text-[#1B4332] font-medium tracking-wide bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 uppercase italic shadow-sm">
-                    fibras , calcio y minerales.
+                    Fibras, calcio y minerales.
                 </p>
 
                 {/* Central Image with Red Frame */}

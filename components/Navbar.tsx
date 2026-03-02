@@ -29,7 +29,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="#home" className="shrink-0 relative flex items-center justify-center  -mt-7">
-          <Image src="/images/logo_final.svg" alt="Light Food Logo" width={150} height={50} className="w-auto scale-280 h-12" />
+          <Image src="/images/logo_final.svg" alt="Logo de Olivia Light Food" width={150} height={50} className="w-auto scale-280 h-12" />
         </Link>
 
         {/* Cart Icon */}

@@ -18,7 +18,7 @@ export default function Products() {
     const { addToCart } = useCart();
 
     const categoryEmojis: Record<string, string> = {
-        "Sanwiches": "🥪",
+        "Sandwiches": "🥪",
         "Pizzas": "🍕",
         "Platos Principales y Pastas": "🍽️",
         "Ensaladas": "🥗",
@@ -58,7 +58,7 @@ export default function Products() {
         <section id="products" className="py-12 bg-[#ccdbb0c9] overflow-hidden">
             <div className="w-full px-3 flex items-center justify-center h-15 ">
                 <p className="text-center text-lg text-[#4A5D23] font-semibold">
-                    ⭐️ Todos los Sandwich van con crostones símil papas-fritas y
+                    ⭐️ Todos los Sándwiches van con crostones símil papas-fritas y
                     postre diet 🍰️
                 </p>
             </div>
@@ -68,7 +68,7 @@ export default function Products() {
                         <Wheat size={55} className="text-[#1B4332]" />
                     </div>
                     <p className="text-[#1B4332] font-bold text-lg text-center px-4 max-w-md uppercase tracking-tight leading-tight">
-                        todos nuestros panes son exclusivos de olivia ligth <br />
+                        todos nuestros panes son exclusivos de olivia light <br />
                         <span className="text-sm normal-case font-semibold">(Usamos 50% de fibra y 50% de harina)</span>
                     </p>
                 </div>
