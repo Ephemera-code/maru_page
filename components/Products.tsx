@@ -18,7 +18,7 @@ export default function Products() {
     const { addToCart } = useCart();
 
     const categoryEmojis: Record<string, string> = {
-        "Sándwiches y Minutas": "🥪",
+        "Sanwiches": "🥪",
         "Pizzas": "🍕",
         "Platos Principales y Pastas": "🍽️",
         "Ensaladas": "🥗",
@@ -45,7 +45,8 @@ export default function Products() {
         : products.filter(product => product.category === selectedCategory);
 
     const handleAddToCart = (product: Product) => {
-        const priceNumber = parseInt(product.price.replace(/[$.]/g, ""));
+        // Robust price parsing keeping only numbers
+        const priceNumber = parseInt(product.price.replace(/\D/g, ""));
         addToCart({
             name: product.name,
             price: priceNumber,
@@ -70,7 +71,8 @@ export default function Products() {
                         todos nuestros panes son exclusivos de olivia ligth
                     </p>
                 </div>
-                <h2 className="text-4xl w-full h-20 flex items-center justify-center font-bold text-[#1B4332]">Menu</h2>
+                <h2 className="text-4xl w-full h-20 flex items-center justify-center font-bold text-[#1B4332]">Menú</h2>
+                <h1 className="sr-only">Comida sana sin grasa y sin azúcar - Olivia Light Food</h1>
 
                 {/* Category Buttons */}
                 <div className="flex flex-wrap justify-center pb-5 gap-2 mb-8 max-w-5xl mx-auto">

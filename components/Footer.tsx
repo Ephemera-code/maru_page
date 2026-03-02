@@ -25,10 +25,10 @@ export default function Footer() {
                     <h3 className="text-xl font-bold mb-6 text-[#1B4332]">Contacto</h3>
                     <ul className="space-y-3 text-[#4A5D23] font-semibold">
                         <li className="flex items-center justify-center md:justify-start gap-2 hover:text-[#C72425] transition-colors cursor-default">
-                            <span>Email: hola@lightfood.com</span>
+                            <span>Email: Olivialightfastfoodllc@gmail.com</span>
                         </li>
                         <li className="flex items-center justify-center md:justify-start gap-2 hover:text-[#C72425] transition-colors cursor-default">
-                            <span>Tel: +54 9 11 5342-2935</span>
+                            <span>Tel: +54 9 11 6587-8387</span>
                         </li>
                     </ul>
                 </div>

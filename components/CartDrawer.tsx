@@ -8,16 +8,18 @@ export default function CartDrawer() {
 
     const [isCheckingOut, setIsCheckingOut] = useState(false);
     const [name, setName] = useState("");
+    const [error, setError] = useState("");
 
     if (!isCartOpen) return null;
 
     const handleWhatsAppCheckout = () => {
         if (!name.trim()) {
-            alert("Por favor, ingresa tu nombre.");
+            setError("Por favor, ingresa tu nombre.");
             return;
         }
+        setError("");
 
-        const phoneNumber = "5491153422935"; // Updated number
+        const phoneNumber = "5491165878387"; // Updated number
         const formattedName = encodeURIComponent(name);
         const methodText = "Retiro en el local";
 
@@ -108,10 +110,14 @@ export default function CartDrawer() {
                                         type="text"
                                         id="name"
                                         value={name}
-                                        onChange={(e) => setName(e.target.value)}
+                                        onChange={(e) => {
+                                            setName(e.target.value);
+                                            if (e.target.value.trim()) setError("");
+                                        }}
                                         placeholder="Ej: Juan Pérez"
-                                        className="border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
+                                        className={`border rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white ${error ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`}
                                     />
+                                    {error && <p className="text-red-500 text-xs font-semibold">{error}</p>}
                                 </div>
                                 <p className="text-sm text-gray-500 italic">
                                     * Los pedidos son solo para retiro por el local.

@@ -3,7 +3,7 @@
     "moneda": "ARS",
     "menu": [
         {
-            "categoria": "Sándwiches y Minutas",
+            "categoria": "Sanwiches",
             "productos": [
                 {
                     "nombre": "Sandwich Pollo",
@@ -16,8 +16,8 @@
                     "precio": 15000
                 },
                 {
-                    "nombre": "Milanesa Soja Napolitana",
-                    "descripcion": "Salsa Fileto, Queso, Tomate, Albahaca y Ajo.",
+                    "nombre": "Sanwich de milanesa de soja a la napolitana",
+                    "descripcion": "Salsa Fileto, Queso, Tomate, Albahaca y Ajo. Viene con crotones de espinaca.",
                     "precio": 7000
                 },
                 {

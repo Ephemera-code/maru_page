@@ -14,6 +14,7 @@ export default function About() {
         { image: '/images/foto_galeria_2.jpeg', text: '' },
         { image: '/images/foto_galeria_3.jpeg', text: '' },
         { image: '/images/foto_galeria_4.jpeg', text: '' },
+        { image: '/images/foto_galeria_5.jpeg', text: '' },
     ];
 
     return (
@@ -37,16 +38,11 @@ export default function About() {
                         <h3 className="font-bold text-[#1B4332] mb-2 uppercase text-sm tracking-wider">Formato dinámico</h3>
                         <p className="text-[#4A5D23] text-sm leading-snug">Los invitados se acercan a nuestras islas y retiran su plato recién hecho.</p>
                     </div>
-                    <div className="bg-white/30 backdrop-blur-sm p-6 rounded-2xl border border-white/20 shadow-sm">
-                        <span className="text-3xl mb-4 block">🌱</span>
-                        <h3 className="font-bold text-[#1B4332] mb-2 uppercase text-sm tracking-wider">Nutrición Estricta</h3>
-                        <p className="text-[#4A5D23] text-sm leading-snug">Menú garantizado sin sal, sin azúcar y sin grasas, cuidando cada detalle.</p>
-                    </div>
                 </div>
             </div>
 
             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-[#1B4332] relative z-10 uppercase tracking-widest text-center">Nuestros Productos</h1>
-            <div className="w-full h-[380px] md:h-[580px] relative z-0">
+            <div className="w-full h-[380px] md:h-[580px] relative z-0" aria-label="Galería de productos de comida saludable Olivia Light Food">
                 <CircularGallery
                     items={galleryItems}
                     bend={0.5}

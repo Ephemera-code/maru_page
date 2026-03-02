@@ -7,14 +7,29 @@ export default function Loader() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        // Minimum time to show loader for branding/fluidity
+        const minTime = 800;
         const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 2000); // Show loader for 2 seconds to ensure assets load visually or just for effect
+            if (document.readyState === "complete") {
+                setIsLoading(false);
+            }
+        }, minTime);
 
-        const handleLoad = () => setIsLoading(false);
+        const handleLoad = () => {
+            // Wait at least minTime even if load is faster
+            const now = Date.now();
+            const elapsed = now - startTime;
+            if (elapsed >= minTime) {
+                setIsLoading(false);
+            } else {
+                setTimeout(() => setIsLoading(false), minTime - elapsed);
+            }
+        };
+
+        const startTime = Date.now();
 
         if (document.readyState === "complete") {
-            // If already loaded, just wait for timer
+            // Already loaded, just wait for timer
         } else {
             window.addEventListener("load", handleLoad);
         }
