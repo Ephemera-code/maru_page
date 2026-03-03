@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Olivia Light Food",
     images: [
       {
-        url: "/images/logo_final.svg",
+        url: "/images/logo_final.png",
         width: 800,
         height: 600,
         alt: "Logo Olivia Light Food",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Olivia Light Food | Comida Sana, Sin Grasa y Sin Azúcar",
     description: "Alimentación consciente y sabrosa. Viandas saludables sin sal, azúcar ni grasas saturadas.",
-    images: ["/images/logo_final.svg"],
+    images: ["/images/logo_final.png"],
   },
   robots: {
     index: true,
