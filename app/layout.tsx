@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lightfood.com"),
-  title: "Olivia Light Food | Sin Sal, Sin Azúcar, Sin Grasas",
+  title: "Olivia Light Fast Food | Sin Sal, Sin Azúcar, Sin Grasas",
   description: "Como hechas en casa. Come rápido y sano.",
   keywords: [
     "comida sana",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Olivia Light Food | Sin Sal, Sin Azúcar, Sin Grasas",
+    title: "Olivia Light Fast Food | Sin Sal, Sin Azúcar, Sin Grasas",
     description: "Como hechas en casa. Come rápido y sano.",
     type: "website",
     locale: "es_AR",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Olivia Light Food | Sin Sal, Sin Azúcar, Sin Grasas",
+    title: "Olivia Light Fast Food | Sin Sal, Sin Azúcar, Sin Grasas",
     description: "Como hechas en casa. Come rápido y sano.",
     images: ["/images/logo_final.png"],
   },
