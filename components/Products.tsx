@@ -41,7 +41,10 @@ export default function Products() {
     );
 
     const filteredProducts = selectedCategory === "Todos"
-        ? products
+        ? [
+            ...products.filter(p => !p.category.startsWith("Ensaladas") && !p.category.startsWith("Desayunos y Meriendas")),
+            ...products.filter(p => p.category.startsWith("Ensaladas") || p.category.startsWith("Desayunos y Meriendas"))
+        ]
         : products.filter(product => product.category === selectedCategory);
 
     const handleAddToCart = (product: Product) => {
@@ -69,7 +72,7 @@ export default function Products() {
                     </div>
                     <p className="text-[#1B4332] font-bold text-lg text-center px-4 max-w-md uppercase tracking-tight leading-tight">
                         todos nuestros panes son exclusivos de olivia light <br />
-                        <span className="text-sm normal-case font-semibold">(Usamos 50% de fibra y 50% de harina)</span>
+                        <span className="text-sm normal-case font-semibold">(Usamos 50% de fibra. Soja, Arveja , Arroz y 50% de harina)</span>
                     </p>
                 </div>
                 <h2 className="text-4xl w-full h-20 flex items-center justify-center font-bold text-[#1B4332]">Menú</h2>
@@ -91,21 +94,34 @@ export default function Products() {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-                    {filteredProducts.map((product, index) => (
-                        <div key={index} className="bg-[#d85e5e5b] rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center relative h-full border border-white/10">
-                            <h3 className="text-xl font-bold text-[#1B4332] mb-2">{product.name}</h3>
+                <div className="flex flex-col gap-12 w-full">
+                    {Array.from(new Set(filteredProducts.map(p => p.category))).map(category => (
+                        <div key={category} className="w-full">
+                            {(selectedCategory === "Todos" || selectedCategory === category) && (
+                                <div className="flex items-center justify-center mb-8">
+                                    <div className="h-px bg-[#1B4332]/20 grow md:grow-0 md:w-1/4"></div>
+                                    <h3 className="text-2xl font-bold text-[#1B4332] mx-4 uppercase tracking-wider text-center">{category}</h3>
+                                    <div className="h-px bg-[#1B4332]/20 grow md:grow-0 md:w-1/4"></div>
+                                </div>
+                            )}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+                                {filteredProducts.filter(p => p.category === category).map((product, index) => (
+                                    <div key={index} className="bg-white/30 backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center relative h-full border border-white/20">
+                                        <h3 className="text-xl font-bold text-[#1B4332] mb-2">{product.name}</h3>
 
-                            <p className="text-[#4A5D23] font-semibold text-sm mb-12 grow">{product.description}</p>
+                                        <p className="text-[#4A5D23] font-semibold text-sm mb-12 grow">{product.description}</p>
 
-                            <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center">
-                                <p className="text-[#1B4332] font-bold text-xl">{product.price}</p>
-                                <button
-                                    onClick={() => handleAddToCart(product)}
-                                    className="bg-[#1B4332] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#E67E22] transition-colors text-sm shadow-md active:scale-95"
-                                >
-                                    Agregar +
-                                </button>
+                                        <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center">
+                                            <p className="text-[#1B4332] font-bold text-xl">{product.price}</p>
+                                            <button
+                                                onClick={() => handleAddToCart(product)}
+                                                className="bg-[#1B4332] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#E67E22] transition-colors text-sm shadow-md active:scale-95"
+                                            >
+                                                Agregar +
+                                            </button>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     ))}

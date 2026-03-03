@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
 
             <div className="container mx-auto px-4 mt-12 pt-8 border-t border-gray-200/50 text-center text-[#3C3F3C] font-medium text-sm">
-                &copy; {new Date().getFullYear()} Olivia Light Food. Todos los derechos reservados.
+                &copy; {new Date().getFullYear()} Olivia Light Fast Food. Todos los derechos reservados.
             </div>
         </footer>
     );

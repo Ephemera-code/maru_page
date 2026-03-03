@@ -1,9 +1,28 @@
+"use client";
+
 import Image from 'next/image';
+import { useEffect } from 'react';
+import { Bounce, toast } from 'react-toastify';
 
 export default function Hero() {
+    useEffect(() => {
+             toast.info('Solo se aceptan pedidos con anticipación 🥗', {
+                position: "top-right",
+                autoClose: 6000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                delay: 1000,
+            });
+    }, []);
+
     return (
         <section id="home" className="min-h-[90svh] flex items-center justify-center bg-[#ccdbb0ad] pt-24 pb-12 overflow-hidden">
-            <div className="text-center px-4 max-w-6xl mx-auto flex flex-col items-center">
+            <div className="text-center px-4 max-w-6xl mx-auto mt-10 flex flex-col items-center">
                 {/* Title */}
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-[#1B4332] mb-3 leading-none">
                     <span className="">Sin Sal.</span> <br /> Sin Azúcar. <br /> <span className="text-[#C72425]">Sin Grasas.</span>
@@ -11,6 +30,9 @@ export default function Hero() {
                 <p className="text-sm md:text-2xl mb-4 text-[#1B4332] font-medium tracking-wide bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 uppercase italic shadow-sm">
                     Fibras, calcio y minerales.
                 </p>
+               <h2 className="text-3xl md:text-7xl mb-5 font-extrabold text-[#1B4332] tracking-tighter drop-shadow-sm">
+                    Como hechas en casa
+                </h2>
 
                 {/* Central Image with Red Frame */}
                 <div className="relative w-full max-w-4xl px-4">
@@ -26,12 +48,12 @@ export default function Hero() {
                     </div>
 
                     {/* Promotional Text */}
-                    <div className="flex w-full pb-2 pt-4 bg-amber-50/60 backdrop-blur-sm rounded-3xl flex-col items-center gap-6 mt-5 mb-4 max-w-4xl mx-auto shadow-sm">
+                    <div className="flex w-full pb-2 pt-4  rounded-3xl flex-col items-center gap-6 mt-5 mb-4 max-w-4xl mx-auto ">
                         <h2 className="text-3xl md:text-7xl font-extrabold text-[#1B4332] tracking-tighter drop-shadow-sm">
-                            Comida sana, rica y natural
+                            Come Rápido <br />y Sano
                         </h2>
                         <p className="sr-only">Especialistas en comida sin grasa, sin azúcar y sin sal.</p>
-                        <p className="text-sm md:text-2xl text-[#1B4332] font-medium tracking-wide bg-amber-50/20 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 uppercase italic shadow-sm">
+                        <p className="text-sm md:text-2xl text-[#1B4332] font-medium tracking-wide  bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 uppercase italic shadow-sm">
                             Carnes magras • <br /> Menú vegetariano • <br /> Estudiantil • Ejecutivo
                         </p>
                     </div>
