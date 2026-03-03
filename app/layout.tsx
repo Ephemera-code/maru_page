@@ -10,6 +10,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lightfood.com"),
   title: "Olivia Light Food | Comida Sana, Sin Grasa y Sin Azúcar",
   description: "Disfruta de la mejor comida sana en Olivia Light. Especialistas en platos sin grasa, sin azúcar y sin sal. Delivery de viandas saludables, catering para eventos y menú ejecutivo natural.",
   keywords: [
