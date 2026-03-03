@@ -11,8 +11,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lightfood.com"),
-  title: "Olivia Light Food | Comida Sana, Sin Grasa y Sin Azúcar",
-  description: "Disfruta de la mejor comida sana en Olivia Light. Especialistas en platos sin grasa, sin azúcar y sin sal. Delivery de viandas saludables, catering para eventos y menú ejecutivo natural.",
+  title: "Olivia Light Food | Sin Sal, Sin Azúcar, Sin Grasas",
+  description: "Como hechas en casa. Come rápido y sano.",
   keywords: [
     "comida sana",
     "sin grasa",
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Olivia Light Food | Comida Sana, Sin Grasa y Sin Azúcar",
-    description: "Comida fresca, natural y saludable. Especialistas en menús sin sal, sin azúcar y sin grasas. ¡Haz tu pedido online!",
+    title: "Olivia Light Food | Sin Sal, Sin Azúcar, Sin Grasas",
+    description: "Como hechas en casa. Come rápido y sano.",
     type: "website",
     locale: "es_AR",
     url: "https://lightfood.com",
@@ -58,8 +58,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Olivia Light Food | Comida Sana, Sin Grasa y Sin Azúcar",
-    description: "Alimentación consciente y sabrosa. Viandas saludables sin sal, azúcar ni grasas saturadas.",
+    title: "Olivia Light Food | Sin Sal, Sin Azúcar, Sin Grasas",
+    description: "Como hechas en casa. Come rápido y sano.",
     images: ["/images/logo_final.png"],
   },
   robots: {
