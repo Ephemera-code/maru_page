@@ -6,7 +6,7 @@ import { Bounce, toast } from 'react-toastify';
 
 export default function Hero() {
     useEffect(() => {
-             toast.info('Solo se aceptan pedidos con anticipación 🥗', {
+             toast.info('Hace tu pedido con anticipación 🥗', {
                 position: "top-right",
                 autoClose: 6000,
                 hideProgressBar: false,

@@ -204,3 +204,8 @@ body {
 .Toastify__close-button {
   align-self: center !important;
 }
+
+.Toastify__progress-bar-theme--light {
+  background: #a3e635 !important;
+  /* Tailwind lime-400 equivalent for a nice light green */
+}
