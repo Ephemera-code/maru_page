@@ -17,6 +17,7 @@ export default function Hero() {
                 theme: "light",
                 transition: Bounce,
                 delay: 1000,
+                
             });
     }, []);
 

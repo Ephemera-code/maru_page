@@ -190,10 +190,11 @@ body {
 }
 
 .Toastify__toast {
-  min-height: 45px !important;
-  font-size: 0.8rem !important;
-  padding: 6px 10px !important;
-  border-radius: 8px !important;
+  min-height: 55px !important;
+  font-size: 1.25rem !important;
+  padding: 14px 20px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
 }
 
 .Toastify__toast-body {
@@ -205,7 +206,8 @@ body {
   align-self: center !important;
 }
 
-.Toastify__progress-bar-theme--light {
+/* Override the progress bar directly */
+.Toastify__progress-bar {
   background: #a3e635 !important;
-  /* Tailwind lime-400 equivalent for a nice light green */
+  /* light green */
 }
