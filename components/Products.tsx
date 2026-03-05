@@ -59,10 +59,11 @@ export default function Products() {
 
     return (
         <section id="products" className="py-12 bg-[#ccdbb0c9] overflow-hidden">
-            <div className="w-full px-3 flex items-center justify-center h-15 ">
+            <div className="w-full px-3 flex items-center justify-center">
                 <p className="text-center text-lg text-[#4A5D23] font-semibold">
                     ⭐️ Todos los Sándwiches van con crostones símil papas-fritas y
-                    postre diet 🍰️
+                    postre diet 🍰️ <br />
+                    <span className="text-sm font-normal text-[#4A5D23]/80">(Flan de chocolate, postrecito de chocolate, de dulce de leche, vainilla, gelatina o ensalada de fruta. Los postres son aleatorios no a eleccion)</span>
                 </p>
             </div>
             <div className="container mx-auto">

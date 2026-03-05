@@ -1,29 +1,25 @@
 "use client";
 
 import Image from 'next/image';
-import { useEffect } from 'react';
-import { Bounce, toast } from 'react-toastify';
 
 export default function Hero() {
-    useEffect(() => {
-             toast.info('Hace tu pedido con anticipación 🥗', {
-                position: "top-right",
-                autoClose: 6000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
-                delay: 1000,
-                
-            });
-    }, []);
 
     return (
         <section id="home" className="min-h-[90svh] flex items-center justify-center bg-[#ccdbb0ad] pt-24 pb-12 overflow-hidden">
             <div className="text-center px-4 max-w-6xl mx-auto mt-10 flex flex-col items-center">
+                {/* Pre-order Banner */}
+                <div className="mb-6 animate-fade-in-down">
+                    <span className="flex flex-col  justify-center items-center gap-2 px-4 py-2 rounded-full bg-amber-50/80 border border-green-200 text-[#1B4332] text-sm md:text-base font-bold tracking-wide shadow-sm backdrop-blur-md">
+
+                        Hace tu pedido con anticipación 🥗 
+
+                         <span className="relative flex h-3 w-3 mx-1">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        </span>
+                    </span>
+                </div>
+
                 {/* Title */}
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-[#1B4332] mb-3 leading-none">
                     <span className="">Sin Sal.</span> <br /> Sin Azúcar. <br /> <span className="text-[#C72425]">Sin Grasas.</span>
@@ -31,7 +27,7 @@ export default function Hero() {
                 <p className="text-sm md:text-2xl mb-4 text-[#1B4332] font-medium tracking-wide bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 uppercase italic shadow-sm">
                     Fibras, calcio y minerales.
                 </p>
-               <h2 className="text-3xl md:text-7xl mb-5 font-extrabold text-[#1B4332] tracking-tighter drop-shadow-sm">
+                <h2 className="text-3xl md:text-7xl mb-5 font-extrabold text-[#1B4332] tracking-tighter drop-shadow-sm">
                     Como hechas en casa
                 </h2>
 

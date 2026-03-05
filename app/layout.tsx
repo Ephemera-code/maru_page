@@ -6,8 +6,6 @@ import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
 import Loader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lightfood.com"),
@@ -128,18 +126,6 @@ export default function RootLayout({
           <Navbar />
           <Background />
           <CartDrawer />
-          <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="light"
-          />
           <section className="flex flex-col min-h-screen relative z-0">
             {children}
           </section>
