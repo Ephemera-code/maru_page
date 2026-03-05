@@ -63,7 +63,7 @@ export default function Products() {
                 <p className="text-center text-lg text-[#4A5D23] font-semibold">
                     ⭐️ Todos los Sándwiches van con crostones símil papas-fritas y
                     postre diet 🍰️ <br />
-                    <span className="text-sm font-normal text-[#4A5D23]/80">(Flan de chocolate, postrecito de chocolate, de dulce de leche, vainilla, gelatina o ensalada de fruta. Los postres son aleatorios no a eleccion)</span>
+                    <span className="text-sm font-semibold text-[#4A5D23]/80">(Flan de chocolate, postrecito de chocolate, de dulce de leche, vainilla, gelatina o ensalada de fruta. Los postres son aleatorios no a eleccion)</span>
                 </p>
             </div>
             <div className="container mx-auto">

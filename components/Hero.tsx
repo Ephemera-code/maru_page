@@ -9,7 +9,7 @@ export default function Hero() {
             <div className="text-center px-4 max-w-6xl mx-auto mt-10 flex flex-col items-center">
                 {/* Pre-order Banner */}
                 <div className="mb-6 animate-fade-in-down">
-                    <span className="flex flex-col  justify-center items-center gap-2 px-4 py-2 rounded-full bg-amber-50/80 border border-green-200 text-[#1B4332] text-sm md:text-base font-bold tracking-wide shadow-sm backdrop-blur-md">
+                    <span className="flex flex-col  justify-center items-center gap-2 px-5 py-2 rounded-full bg-amber-50/80 border border-green-200 text-[#1B4332] text-md font-bold tracking-wide shadow-sm backdrop-blur-md">
 
                         Hace tu pedido con anticipación 🥗 
 
