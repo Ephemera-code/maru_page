@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div className="flex flex-col items-center md:items-start text-center md:text-left">
                     <div className="mb-6">
-                        <Image src="/images/logo_final.svg" alt="Logo de Olivia Light Food" width={150} height={50} className="w-auto scale-250 h-12" />
+                        <Image src="/images/logo_final.svg" alt="Logo de Olivia Light Food" width={150} height={50}  className="w-auto scale-250 h-12" />
                     </div>
 
                 </div>

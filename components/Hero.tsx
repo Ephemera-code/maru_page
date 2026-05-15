@@ -71,7 +71,7 @@ export default function Hero() {
                             rel="noopener noreferrer"
                             className="bg-white text-green-600 border-2 border-green-600 px-10 py-3 rounded-full text-sm font-bold hover:bg-green-50 transition-all hover:scale-105 flex items-center justify-center gap-3 shadow-lg"
                         >
-                            <Image src="/images/whatsapp_icon.svg" alt="WhatsApp" width={20} height={28} />
+                            <Image src="/images/whatsapp_icon.svg" alt="WhatsApp" width={28} height={28} style={{ width: '40px', height: 'auto' }}/>
                             Whatsapp
                         </a>
                     </div>

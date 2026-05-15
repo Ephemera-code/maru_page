@@ -5,6 +5,7 @@ import { useState } from "react";
 import menuData from "@/app/data/menu.json";
 import { useCart } from "@/context/CartContext";
 import { Wheat } from "lucide-react";
+import  Image from "next/image";
 
 interface Product {
     name: string;
@@ -17,16 +18,24 @@ interface Product {
 export default function Products() {
     const { addToCart } = useCart();
 
-    const categoryEmojis: Record<string, string> = {
-        "Sandwiches": "🥪",
-        "Pizzas": "🍕",
-        "Platos Principales y Pastas": "🍽️",
-        "Ensaladas": "🥗",
-        "Desayunos y Meriendas": "☕",
-        "Empanadas": "🥟"
+    // Relación categoría -> emoji
+
+
+    // Relación categoría -> icono imagen
+    // Aseguramos coincidencia exacta con los nombres de categoría del JSON
+    const categoryIcons: Record<string, string | string[]> = {
+        "Sandwiches": "/images/sandwich.png",
+        "Pizzas": "/images/pizza.png",
+        "Platos Principales y Pastas": [
+            "/images/churrasco.png",
+            "/images/pasta.png"
+        ],
+        "Ensaladas": "/images/ensalada.png",
+        "Desayunos y Meriendas": "/images/desayuno-ingles.png",
+        "Empanadas": "/images/empanada.png"
     };
 
-    const categories = ["Todos", ...menuData.menu.map(c => `${c.categoria} ${categoryEmojis[c.categoria] || ''}`.trim())];
+    const categories = ["Todos", ...menuData.menu.map(c => c.categoria)];
 
     const [selectedCategory, setSelectedCategory] = useState("Todos");
 
@@ -34,8 +43,8 @@ export default function Products() {
         category.productos.map(product => ({
             name: product.nombre,
             price: `$${product.precio}`,
-            image: categoryEmojis[category.categoria] || "🍽️",
-            category: `${category.categoria} ${categoryEmojis[category.categoria] || ''}`.trim(),
+            image: "", // Sin emoji ni imagen
+            category: category.categoria,
             description: product.descripcion
         }))
     );
@@ -59,12 +68,16 @@ export default function Products() {
 
     return (
         <section id="products" className="py-12 bg-[#ccdbb0c9] overflow-hidden">
-            <div className="w-full px-3 flex items-center justify-center">
-                <p className="text-center text-lg text-[#4A5D23] font-semibold">
+            <div className="w-full px-3 flex flex-col items-center justify-center">
+                <p className="text-center  text-lg text-[#4A5D23] font-semibold">
                     ⭐️ Todos los Sándwiches van con crostones símil papas-fritas y
-                    postre diet 🍰️ <br />
-                    <span className="text-sm font-semibold text-[#4A5D23]/80">(Flan, postrecito de chocolate, de dulce de leche, vainilla, gelatina o ensalada de fruta. Los postres son aleatorios no a eleccion)</span>
+                    postre diet 
                 </p>
+                <div className="flex items-center justify-center gap-2 mb-2 mt-2">
+                    <Image src="/images/postre.png" alt="Postre" width={40} height={40}/>
+                    <Image src="/images/pescado-y-papas-fritas.png" alt="Pescado" width={40} height={40}/>  <br />
+                </div>
+                <span className="text-sm text-center font-semibold text-[#4A5D23]/80">(Flan, postrecito de chocolate, de dulce de leche, vainilla, gelatina o ensalada de fruta. Los postres son aleatorios no a eleccion)</span>
             </div>
             <div className="container mx-auto">
                 <div className="flex flex-col items-center justify-center pt-8 gap-2">
@@ -101,7 +114,23 @@ export default function Products() {
                             {(selectedCategory === "Todos" || selectedCategory === category) && (
                                 <div className="flex items-center justify-center mb-8">
                                     <div className="h-px bg-[#1B4332]/20 grow md:grow-0 md:w-1/4"></div>
-                                    <h3 className="text-2xl font-bold text-[#1B4332] mx-4 uppercase tracking-wider text-center">{category}</h3>
+                                    <div className="flex flex-col items-center w-full">
+                                        <h3 className="text-2xl font-bold text-[#1B4332] mx-4 uppercase tracking-wider text-center">
+                                            {category}
+                                        </h3>
+                                        <div className="flex items-center justify-center gap-2 mt-2">
+                                            {(() => {
+                                                const icon = categoryIcons[category];
+                                                if (!icon) return null;
+                                                if (Array.isArray(icon)) {
+                                                    return icon.map((src, idx) => (
+                                                        <img key={src} src={src} alt={category + idx} className="inline-block w-8 h-8 align-middle" onError={e => (e.currentTarget.style.display = 'none')} />
+                                                    ));
+                                                }
+                                                return <img src={icon} alt={category} className="w-8 h-8 align-middle" onError={e => (e.currentTarget.style.display = 'none')} />;
+                                            })()}
+                                        </div>
+                                    </div>
                                     <div className="h-px bg-[#1B4332]/20 grow md:grow-0 md:w-1/4"></div>
                                 </div>
                             )}
