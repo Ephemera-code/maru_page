@@ -1,0 +1,206 @@
+{
+    "restaurante": "Olivia Light Fast Food",
+    "moneda": "ARS",
+    "menu": [
+        {
+            "categoria": "Sandwiches",
+            "productos": [
+                {
+                    "nombre": "Sandwich Pollo",
+                    "descripcion": "Pechuga de Pollo, Queso Light, Verdeo, Espinaca, Salsa de Albahaca y Ajo.",
+                    "precio": 8500
+                },
+                {
+                    "nombre": "Sandwich Lomo",
+                    "descripcion": "Lomo, Tomate, Huevo, Queso, Cebolla Caramelizada.",
+                    "precio": 15000
+                },
+                {
+                    "nombre": "Sandwich de milanesa de soja a la napolitana",
+                    "descripcion": "Salsa Fileto, Queso, Tomate, Albahaca y Ajo. Viene con crotones de espinaca.",
+                    "precio": 7000
+                },
+                {
+                    "nombre": "Sandwich Spinach",
+                    "descripcion": "Medallón Espinaca, Jamón, Huevo, Tomate, Queso Cheddar.",
+                    "precio": 7500
+                },
+                {
+                    "nombre": "Sandwich Soja",
+                    "descripcion": "Medallón de Soja, Jamón, Huevo revuelto con Espinaca, Queso Cheddar, Tomate.",
+                    "precio": 7500
+                },
+                {
+                    "nombre": "Sandwich Tutti Verdura",
+                    "descripcion": "Medallón Tutti Verduras, Jamón, Queso Cheddar, Huevo, Tomate.",
+                    "precio": 7500
+                },
+                {
+                    "nombre": "Pancho Vegetal",
+                    "descripcion": "Pan Olivia, Salchicha Vegetal (soja), Salsas Varias a Elegir.",
+                    "precio": 3500
+                }
+            ]
+        },
+        {
+            "categoria": "Pizzas",
+            "productos": [
+                {
+                    "nombre": "Pizza Queen Olivia",
+                    "descripcion": "Salsa Fileto, Queso Light, Rúcula, Aceitunas, Tomates Cherry, Jamón Crudo volteado, Touch Queso.",
+                    "precio": 18000
+                },
+                {
+                    "nombre": "Pizza Pumpkin (Calabaza)",
+                    "descripcion": "Calabaza, Queso Light, Salsa Fileto, Aceitunas.",
+                    "precio": 14000
+                },
+                {
+                    "nombre": "Pizza Berenjena",
+                    "descripcion": "Berenjena, Queso Light, Salsa Fileto, Aceitunas, Lluvia Orégano.",
+                    "precio": 14000
+                },
+                {
+                    "nombre": "Pizza Green Zapallito",
+                    "descripcion": "Zapallito Verde, Queso Light, Salsa Fileto, Aceitunas, Lluvia Orégano.",
+                    "precio": 14000
+                },
+                {
+                    "nombre": "Pizza Brócoli",
+                    "descripcion": "Brócoli, Queso Light, Salsa Fileto, Aceitunas, Lluvia Orégano.",
+                    "precio": 18000
+                },
+                {
+                    "nombre": "Pizza Napolitana Olivia",
+                    "descripcion": "Tomate, Queso Light, Salsa Fileto, Aceitunas, Ajo y Albahaca.",
+                    "precio": 14000
+                },
+                {
+                    "nombre": "Pizza Champiñón",
+                    "descripcion": "Champiñón, Queso Light, Salsa Fileto, Aceitunas, Verdeo, Albahaca y Ajo.",
+                    "precio": 22000
+                },
+                {
+                    "nombre": "Pizza Spinach",
+                    "descripcion": "Espinaca, Queso Light, Salsa Fileto, Aceitunas, Morrón, Orégano, Albahaca y Ajo.",
+                    "precio": 18000
+                },
+                {
+                    "nombre": "Pizza Soja",
+                    "descripcion": "Soja, Salsa Fileto, Queso Light, Aceitunas, Morrón, Albahaca y Ajo, Orégano.",
+                    "precio": 18000
+                },
+                {
+                    "nombre": "Pizza Tutti Verdura",
+                    "descripcion": "Verduras Varias, Salsa Fileto, Queso Light, Aceitunas, Orégano, Albahaca y Ajo.",
+                    "precio": 18000
+                },
+                {
+                    "nombre": "Pizza Tradicional",
+                    "descripcion": "Salsa Fileto, Queso Light, Aceitunas, Orégano.",
+                    "precio": 10000
+                },
+                {
+                    "nombre": "Pizza Fugazza",
+                    "descripcion": "Salsa Fileto, Queso Light, Cebolla, Aceitunas, Orégano.",
+                    "precio": 10000
+                }
+            ]
+        },
+        {
+            "categoria": "Platos Principales y Pastas",
+            "productos": [
+                {
+                    "nombre": "Fish con Wok de Verduras",
+                    "descripcion": "Filet de pescado arrollado con Tomate, Limón, Albahaca y Ajo, Hojita de Laurel.",
+                    "precio": 18000
+                },
+                {
+                    "nombre": "Olivia Sunday (Osobuco)",
+                    "descripcion": "Salsa Base con Osobuco Tiernizado, saborizado al vino y Fideos Creps de Espinaca.",
+                    "precio": 22000
+                },
+                {
+                    "nombre": "Fideos Kids",
+                    "descripcion": "Espagueti de Arroz, Salsa Fileto, Pollo.",
+                    "precio": 8000
+                },
+                {
+                    "nombre": "Fondue",
+                    "descripcion": "Cuatro Quesos Diet, Vino Blanco Seco, Pimienta. Cubos de Suprema, Lomo, Milanesa Veggie, Espinacas, Tutti Verduras.",
+                    "precio": 25000
+                }
+            ]
+        },
+        {
+            "categoria": "Ensaladas",
+            "productos": [
+                {
+                    "nombre": "Ensalada de Pollo",
+                    "descripcion": "Pollo, Verduras asadas (Berenjena, Zanahoria, Zapallito verde, Calabaza).",
+                    "precio": 8000
+                },
+                {
+                    "nombre": "Ensalada de Atún",
+                    "descripcion": "Atún, Verduras Asadas (Berenjena, Zanahoria, Zapallito Verde, Calabaza).",
+                    "precio": 9500
+                },
+                {
+                    "nombre": "Ensalada Tofu",
+                    "descripcion": "Tofu, Verduras Asadas (Berenjena, Zanahoria, Zapallito Verde, Calabaza).",
+                    "precio": 9500
+                }
+            ]
+        },
+        {
+            "categoria": "Desayunos y Meriendas",
+            "productos": [
+                {
+                    "nombre": "Tostado de Campo",
+                    "descripcion": "Cafe, Tostado con Jamón y Queso, Vasito de Frutas.",
+                    "precio": 14000
+                },
+                {
+                    "nombre": "Tostado Daddy",
+                    "descripcion": "Café, Tostado con Jamón Crudo y Tomate, Vasito con Frutas.",
+                    "precio": 14000
+                },
+                {
+                    "nombre": "Sweet Crepes",
+                    "descripcion": "Café, Crepes con Frutas, Crepes con Dulce de Leche Diet y Queso Fresco Diet, Vasito Gelatina.",
+                    "precio": 14000
+                },
+                {
+                    "nombre": "Crepes Olivia",
+                    "descripcion": "Café, Crepe con Revuelto de Huevo y Espinaca, Crepe de Jamón y Queso, Vasito de Frutas.",
+                    "precio": 14000
+                }
+            ]
+        },
+        {
+            "categoria": "Empanadas",
+            "productos": [
+                {
+                    "nombre": "Empanada Green",
+                    "descripcion": "Espinaca, Queso, Aceitunas, Morrón, Tomate.",
+                    "precio": 2500
+                },
+                {
+                    "nombre": "Empanada Soja Texturizada",
+                    "descripcion": "Huevo, Queso, Aceituna, Morrón, Cebollas, Pimentón Ahumado.",
+                    "precio": 2500
+                },
+                {
+                    "nombre": "Empanada Mix de Verduras",
+                    "descripcion": "Mix de Verduras, Huevo, Queso, Morrón, Aceituna.",
+                    "precio": 2500
+                },
+                {
+                    "nombre": "Empanada Fugazza",
+                    "descripcion": "Cebolla Caramelizada, Queso por Salut, Touch de Queso Rallado en Tiritas, Pimentón Ahumado.",
+                    "precio": 2500
+                }
+            ]
+        }
+    ]
+}
