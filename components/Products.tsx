@@ -4,7 +4,7 @@
 import { useState } from "react";
 import menuData from "@/app/data/menu.json";
 import { useCart } from "@/context/CartContext";
-import { Wheat } from "lucide-react";
+
 import  Image from "next/image";
 
 interface Product {
@@ -68,26 +68,32 @@ export default function Products() {
 
     return (
         <section id="products" className="py-12 bg-[#ccdbb0c9] overflow-hidden">
-            <div className="w-full px-3 flex flex-col items-center justify-center">
-                <p className="text-center  text-lg text-[#4A5D23] font-semibold">
-                    ⭐️ Todos los Sándwiches van con crostones símil papas-fritas y
-                    postre diet 
-                </p>
-                <div className="flex items-center justify-center gap-2 mb-2 mt-2">
-                    <Image src="/images/postre.png" alt="Postre" width={40} height={40}/>
-                    <Image src="/images/pescado-y-papas-fritas.png" alt="Pescado" width={40} height={40}/>  <br />
-                </div>
-                <span className="text-sm text-center font-semibold text-[#4A5D23]/80">(Flan, postrecito de chocolate, de dulce de leche, vainilla, gelatina o ensalada de fruta. Los postres son aleatorios no a eleccion)</span>
-            </div>
-            <div className="container mx-auto">
-                <div className="flex flex-col items-center justify-center pt-8 gap-2">
-                    <div className="bg-[#1B4332]/10 p-3 rounded-full">
-                        <Wheat size={55} className="text-[#1B4332]" />
+            <div className="container mx-auto px-3">
+                <div className="grid gap-4 md:grid-cols-2 mb-8">
+                    <div className="rounded-3xl bg-white/30 backdrop-blur-sm p-6  border border-white/30 shadow-lg text-center">
+                        <div className="flex items-center justify-center gap-3 mb-4">
+                            <Image src="/images/un-pan.png" alt="Postre" width={40} height={40}/> 
+                            <h3 className="text-xl mt-2 font-bold text-[#1B4332]">Pan Exclusivo</h3>
+                        </div>
+                        <p className="text-[#4A5D23] text-base font-semibold">
+                            Receta Olivia Light, En Todos Nuestros Panes
+                        </p>
+                        <p className="mt-3 text-md text-[#4A5D23]/80">
+                            (Usamos 50% de fibra. Soja, Arveja , Arroz y 50% de harina)
+                        </p>
                     </div>
-                    <p className="text-[#1B4332] font-bold text-lg text-center px-4 max-w-md uppercase tracking-tight leading-tight">
-                        todos nuestros panes son exclusivos de olivia light <br />
-                        <span className="text-sm normal-case font-semibold">(Usamos 50% de fibra. Soja, Arveja , Arroz y 50% de harina)</span>
-                    </p>
+                    <div className="rounded-3xl bg-white/30 backdrop-blur-sm p-6  border border-white/30 shadow-lg text-center">
+                        <div className="flex items-center justify-center gap-3 mb-4">
+                            <Image src="/images/caja-de-regalo.png" alt="Pan" width={40} height={40}/>
+                            <h3 className="text-xl mt-2 font-bold text-[#1B4332]">Extras Incluidos</h3>
+                        </div>
+                        <p className="text-[#4A5D23] text-base font-semibold">
+                           Crostones + Postre Diet , En Todos los Sándwiches
+                        </p>
+                        <p className="mt-3 text-md text-[#4A5D23]/80">
+                           (Flan, postrecito de chocolate, de dulce de leche, vainilla, gelatina o ensalada de fruta. Los postres son aleatorios no a eleccion)
+                        </p>
+                    </div>
                 </div>
                 <h2 className="text-4xl w-full h-20 flex items-center justify-center font-bold text-[#1B4332]">Menú</h2>
                 <h1 className="sr-only">Comida sana sin grasa y sin azúcar - Olivia Light Food</h1>

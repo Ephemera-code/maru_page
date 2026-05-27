@@ -37,9 +37,6 @@ export default function About() {
                 <h2 className="text-3xl md:text-5xl font-extrabold text-[#1B4332] mb-6 tracking-tighter">
                     Islas Gastronómicas Saludables para tu Evento
                 </h2>
-                <p className="text-lg md:text-xl text-[#344b25] font-medium leading-relaxed mb-10">
-                    Preparamos y servimos en el momento.
-                </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
                     <div className="bg-white/30 backdrop-blur-sm p-6 rounded-2xl border border-white/20 shadow-sm">
