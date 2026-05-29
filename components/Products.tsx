@@ -78,7 +78,7 @@ export default function Products() {
                         <p className="text-[#4A5D23] text-base font-semibold">
                             Receta Olivia Light, En Todos Nuestros Panes
                         </p>
-                        <p className="mt-3 text-md text-[#4A5D23]/80">
+                        <p className="mt-3 text-md font-bold text-[#4A5D23]/80">
                             (Usamos 50% de fibra. Soja, Arveja , Arroz y 50% de harina)
                         </p>
                     </div>
@@ -90,7 +90,7 @@ export default function Products() {
                         <p className="text-[#4A5D23] text-base font-semibold">
                            Crostones + Postre Diet , En Todos los Sándwiches
                         </p>
-                        <p className="mt-3 text-md text-[#4A5D23]/80">
+                        <p className="mt-3 text-md font-bold text-[#4A5D23]/80">
                            (Flan, postrecito de chocolate, de dulce de leche, vainilla, gelatina o ensalada de fruta. Los postres son aleatorios no a eleccion)
                         </p>
                     </div>

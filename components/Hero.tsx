@@ -24,6 +24,9 @@ export default function Hero() {
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-[#1B4332] mb-3 leading-none">
                     <span className="">Sin Sal.</span> <br /> Sin Azúcar. <br /> <span className="text-[#C72425]">Sin Grasas.</span>
                 </h1>
+                    <p className="text-sm md:text-2xl text-[#1B4332] mb-3 font-medium tracking-wide  bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-3xl border border-white/20 uppercase italic shadow-sm">
+                         Fibras Calcio Y Minerales
+                    </p>
                 
                 <h2 className="text-3xl md:text-7xl mb-5 font-extrabold text-[#1B4332] tracking-tighter drop-shadow-sm">
                     Como hechas en casa
@@ -49,13 +52,13 @@ export default function Hero() {
                         </h2>
                         <p className="sr-only">Especialistas en comida sin grasa, sin azúcar y sin sal.</p>
                         
-                         <p className="text-sm md:text-2xl text-center text-[#1B4332] font-medium tracking-wide  bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 uppercase italic shadow-sm">
+                         <p className="text-sm md:text-2xl text-center text-[#1B4332] font-bold tracking-wide  bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 uppercase italic shadow-sm">
                             Carnes magras •
                             Menú vegetariano •
                             Estudiantil • Ejecutivo
                         </p> 
-                        <p className="text-sm md:text-2xl text-[#1B4332] font-medium tracking-wide  bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-3xl border border-white/20 uppercase italic shadow-sm">
-                           Rico en prebióticos naturales Con vegetales y fibras reales <span className="text-amber-950"> (No apto para celíacos ni dietas veganas) </span>
+                        <p className="text-sm md:text-2xl text-[#1B4332] font-bold tracking-wide  bg-amber-50/60 backdrop-blur-md px-6 py-2 rounded-3xl border border-white/20 uppercase italic shadow-sm">
+                           Rico en prebióticos.<span className="text-amber-950"> (No apto para celíacos y veganos) </span>
                         </p>
                     </div>
 
