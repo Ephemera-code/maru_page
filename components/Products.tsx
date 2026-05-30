@@ -79,7 +79,7 @@ export default function Products() {
                             Receta Olivia Light, En Todos Nuestros Panes
                         </p>
                         <p className="mt-3 text-md font-bold text-[#4A5D23]/80">
-                            (Usamos 50% de fibra. Soja, Arveja , Arroz y 50% de harina)
+                            (Usamos 50% de fibra. Soja, Arveja , Arroz , chía y 50% de harina)
                         </p>
                     </div>
                     <div className="rounded-3xl bg-white/30 backdrop-blur-sm p-6  border border-white/30 shadow-lg text-center">
