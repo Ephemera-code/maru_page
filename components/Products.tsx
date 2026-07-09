@@ -78,8 +78,11 @@ export default function Products() {
                         <p className="text-[#4A5D23] text-base font-semibold">
                             Receta Olivia Light, En Todos Nuestros Panes
                         </p>
-                        <p className="mt-3 text-md font-bold text-[#4A5D23]/80">
-                            (Usamos 50% de fibra. Soja, Arveja , Arroz , chía y 50% de harina)
+                        <p className="mt-3 text-md text-center font-bold text-[#4A5D23]/80">
+                            Nuestros ingredientes seleccionados <br />
+
+                            Fibras vegetales <br /> Soja, arveja, quínoa y arroz. <br />
+                            Base y fermentación <br /> Harina, miel y levadura.
                         </p>
                     </div>
                     <div className="rounded-3xl bg-white/30 backdrop-blur-sm p-6  border border-white/30 shadow-lg text-center">
@@ -130,10 +133,10 @@ export default function Products() {
                                                 if (!icon) return null;
                                                 if (Array.isArray(icon)) {
                                                     return icon.map((src, idx) => (
-                                                        <img key={src} src={src} alt={category + idx} className="inline-block w-8 h-8 align-middle" onError={e => (e.currentTarget.style.display = 'none')} />
+                                                        <Image key={src} src={src} alt={`${category} ${idx}`} width={32} height={32} className="inline-block w-8 h-8 align-middle" />
                                                     ));
                                                 }
-                                                return <img src={icon} alt={category} className="w-8 h-8 align-middle" onError={e => (e.currentTarget.style.display = 'none')} />;
+                                                return <Image src={icon} alt={category} width={32} height={32} className="w-8 h-8 align-middle" />;
                                             })()}
                                         </div>
                                     </div>

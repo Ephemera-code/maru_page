@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function DesktopNotice() {
   const [pageUrl, setPageUrl] = useState("");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setPageUrl(window.location.href);
     }
   }, []);
@@ -27,9 +29,11 @@ export default function DesktopNotice() {
 
         <div className="mt-8 flex flex-col items-center gap-4">
           {qrSrc ? (
-            <img
+            <Image
               src={qrSrc}
               alt="QR para abrir la página en el celular"
+              width={320}
+              height={320}
               className="w-72 h-72 rounded-3xl border border-white/20 bg-white p-2"
             />
           ) : (
