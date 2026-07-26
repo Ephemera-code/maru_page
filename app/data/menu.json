@@ -129,6 +129,11 @@
                     "nombre": "Fondue",
                     "descripcion": "Cuatro Quesos Diet, Vino Blanco Seco, Pimienta. Cubos de Suprema, Lomo, Milanesa Veggie, Espinacas, Tutti Verduras.",
                     "precio": 25000
+                },
+                {
+                    "nombre": "Menu premium",
+                    "descripcion": " Churrasco a la pizza ,colchon de espaguetis de arroz.",
+                    "precio": 18000
                 }
             ]
         },
