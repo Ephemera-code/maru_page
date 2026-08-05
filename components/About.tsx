@@ -18,7 +18,7 @@ export default function About() {
     ];
 
     return (
-        <section id="about" className="py-12 md:py-24 min-h-[70vh] md:min-h-screen bg-[#ccdbb0c9] flex flex-col items-center relative overflow-hidden">
+        <section id="about" className="py-12 md:py-24 min-h-[70vh] md:min-h-screen bg-[#73a750ad] flex flex-col items-center relative overflow-hidden">
 
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[#1B4332] relative z-10 uppercase tracking-widest text-center">Nuestros Productos</h2>
             <div className="w-full h-[380px] md:h-[580px] relative z-0" aria-label="Galería de productos de comida saludable Olivia Light Food">
@@ -39,12 +39,12 @@ export default function About() {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                    <div className="bg-white/30 backdrop-blur-sm p-6 rounded-2xl border border-white/20 shadow-sm">
+                    <div className="bg-white/40 backdrop-blur-sm p-6 rounded-2xl border border-white/20 shadow-sm">
                         <span className="text-3xl mb-4 block">🧑‍🍳</span>
                         <h3 className="font-bold text-[#1B4332] mb-2 uppercase text-sm tracking-wider">Preparamos en el momento</h3>
                         <p className="text-[#4A5D23] text-sm leading-snug">Preparamos y servimos todo en el lugar para garantizar máxima frescura.</p>
                     </div>
-                    <div className="bg-white/30 backdrop-blur-sm p-6 rounded-2xl border border-white/20 shadow-sm">
+                    <div className="bg-white/40 backdrop-blur-sm p-6 rounded-2xl border border-white/20 shadow-sm">
                         <span className="text-3xl mb-4 block">🍽️</span>
                         <h3 className="font-bold text-[#1B4332] mb-2 uppercase text-sm tracking-wider">Formato dinámico</h3>
                         <p className="text-[#4A5D23] text-sm leading-snug">Los invitados se acercan a nuestras islas y retiran su plato recién hecho.</p>

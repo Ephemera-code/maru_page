@@ -67,10 +67,10 @@ export default function Products() {
     };
 
     return (
-        <section id="products" className="py-12 bg-[#ccdbb0c9] overflow-hidden">
+        <section id="products" className="py-12 bg-[#73a750ad] overflow-hidden">
             <div className="container mx-auto px-3">
                 <div className="grid gap-4 md:grid-cols-2 mb-8">
-                    <div className="rounded-3xl bg-white/30 backdrop-blur-sm p-6  border border-white/30 shadow-lg text-center">
+                    <div className="rounded-3xl bg-white/40 backdrop-blur-sm p-6  border border-white/30 shadow-lg text-center">
                         <div className="flex items-center justify-center gap-3 mb-4">
                             <Image src="/images/un-pan.png" alt="Postre" width={40} height={40}/> 
                             <h3 className="text-xl mt-2 font-bold text-[#1B4332]">Pan Exclusivo</h3>
@@ -85,7 +85,7 @@ export default function Products() {
                             Base y fermentación <br /> Harina, miel y levadura.
                         </p>
                     </div>
-                    <div className="rounded-3xl bg-white/30 backdrop-blur-sm p-6  border border-white/30 shadow-lg text-center">
+                    <div className="rounded-3xl bg-white/40 backdrop-blur-sm p-6  border border-white/30 shadow-lg text-center">
                         <div className="flex items-center justify-center gap-3 mb-4">
                             <Image src="/images/caja-de-regalo.png" alt="Pan" width={40} height={40}/>
                             <h3 className="text-xl mt-2 font-bold text-[#1B4332]">Extras Incluidos</h3>
@@ -145,7 +145,7 @@ export default function Products() {
                             )}
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
                                 {filteredProducts.filter(p => p.category === category).map((product, index) => (
-                                    <div key={index} className="bg-white/30 backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center relative h-full border border-white/20">
+                                    <div key={index} className="bg-white/40 backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center relative h-full border border-white/20">
                                         <h3 className="text-xl font-bold text-[#1B4332] mb-2">{product.name}</h3>
 
                                         <p className="text-[#4A5D23] font-semibold text-sm mb-12 grow">{product.description}</p>
