@@ -67,7 +67,7 @@ export default function Products() {
     };
 
     return (
-        <section id="products" className="py-12 bg-[#cae794c9] overflow-hidden">
+        <section id="products" className="py-12 bg-[#a7dd439f] overflow-hidden">
             <div className="container mx-auto px-3">
                 <div className="grid gap-4 md:grid-cols-2 mb-8">
                     <div className="rounded-3xl bg-white/30 backdrop-blur-sm p-6  border border-white/30 shadow-lg text-center">
