@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Hero() {
 
     return (
-        <section id="home" className="min-h-[90svh] flex items-center justify-center bg-[#a7dd439f] pt-24 pb-12 overflow-hidden">
+        <section id="home" className="min-h-[90svh] flex items-center justify-center bg-[#a7dd437e] pt-24 pb-12 overflow-hidden">
             <div className="text-center px-1 max-w-6xl mx-auto mt-10 flex flex-col items-center">
                 {/* Pre-order Banner */}
                 <div className="mb-6 animate-fade-in-down w-full">

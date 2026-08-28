@@ -18,7 +18,7 @@ export default function About() {
     ];
 
     return (
-        <section id="about" className="py-12 md:py-24 min-h-[70vh] md:min-h-screen bg-[#a7dd439f] flex flex-col items-center relative overflow-hidden">
+        <section id="about" className="py-12 md:py-24 min-h-[70vh] md:min-h-screen bg-[#a7dd437e] flex flex-col items-center relative overflow-hidden">
 
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[#1B4332] relative z-10 uppercase tracking-widest text-center">Nuestros Productos</h2>
             <div className="w-full h-[380px] md:h-[580px] relative z-0" aria-label="Galería de productos de comida saludable Olivia Light Food">
